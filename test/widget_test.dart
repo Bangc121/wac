@@ -11,20 +11,44 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:wac/main.dart';
 
 void main() {
-  testWidgets('Counter increments smoke test', (WidgetTester tester) async {
+  testWidgets('Bottom navigation bar smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(const MyApp());
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    // Verify that our app starts at the Home page.
+    expect(find.text('Home Page'), findsOneWidget);
+    expect(find.text('Search Page'), findsNothing);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
+    // Tap the 'Search' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.search));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    // Verify that we have navigated to the Search page.
+    expect(find.text('Home Page'), findsNothing);
+    expect(find.text('Search Page'), findsOneWidget);
+
+    // Tap the 'Notifications' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.notifications));
+    await tester.pump();
+
+    // Verify that we have navigated to the Notifications page.
+    expect(find.text('Search Page'), findsNothing);
+    expect(find.text('Notifications Page'), findsOneWidget);
+
+    // Tap the 'Settings' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.settings));
+    await tester.pump();
+
+    // Verify that we have navigated to the Settings page.
+    expect(find.text('Notifications Page'), findsNothing);
+    expect(find.text('Settings Page'), findsOneWidget);
+
+    // Tap the 'Profile' icon and trigger a frame.
+    await tester.tap(find.byIcon(Icons.person));
+    await tester.pump();
+
+    // Verify that we have navigated to the Profile page.
+    expect(find.text('Settings Page'), findsNothing);
+    expect(find.text('Profile Page'), findsOneWidget);
   });
 }
