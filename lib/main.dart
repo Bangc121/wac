@@ -33,7 +33,7 @@ class MainScreen extends StatefulWidget {
 }
 
 class _MainScreenState extends State<MainScreen> {
-  int _selectedIndex = 0;
+  int _selectedIndex = 2; // 홈 페이지를 기본으로 설정
 
   static const List<Widget> _widgetOptions = <Widget>[
     ChurchPage(),
