@@ -1,15 +1,35 @@
 # wac
 
-A new Flutter project.
+A scalable Flutter application built with a Feature-first architecture.
 
-## Getting Started
+## 📚 Documentation
+
+- [Project Structure & Architecture](docs/PROJECT_STRUCTURE.md)
+- [Tech Stack & Libraries](docs/TECH_STACK.md)
+
+## 🚀 Getting Started
 
 This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
+### Prerequisites
+- Flutter SDK
+- Dart SDK
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+### Installation
+
+1.  Clone the repository.
+2.  Install dependencies:
+    ```bash
+    flutter pub get
+    ```
+3.  Generate code (for Freezed/JSON Serializable):
+    ```bash
+    dart run build_runner build --delete-conflicting-outputs
+    ```
+4.  Run the app:
+    ```bash
+    flutter run
+    ```
 
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
