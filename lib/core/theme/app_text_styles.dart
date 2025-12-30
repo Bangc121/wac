@@ -2,18 +2,21 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 class AppTextStyles {
+  // Headings
   static const TextStyle displayLarge = TextStyle(
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.textPrimary,
+    // fontFamily: 'Inter', // TODO: Add GoogleFonts or Asset if needed
   );
 
   static const TextStyle displayMedium = TextStyle(
-    fontSize: 28,
+    fontSize: 20,
     fontWeight: FontWeight.bold,
     color: AppColors.textPrimary,
   );
 
+  // Body
   static const TextStyle bodyLarge = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.normal,
@@ -26,16 +29,23 @@ class AppTextStyles {
     color: AppColors.textSecondary,
   );
 
+  // Labels / Buttons
   static const TextStyle labelLarge = TextStyle(
     fontSize: 16,
     fontWeight: FontWeight.w600,
     color: Colors.white,
   );
 
-  // Dark mode variants can be handled via Theme.of(context) usually,
-  // but if needed explicitly:
+  // Links / Action Text
+  static const TextStyle link = TextStyle(
+    fontSize: 14,
+    fontWeight: FontWeight.w500,
+    color: AppColors.textSecondary,
+  );
+
+  // Dark mode variants
   static const TextStyle darkDisplayLarge = TextStyle(
-    fontSize: 32,
+    fontSize: 24,
     fontWeight: FontWeight.bold,
     color: AppColors.darkTextPrimary,
   );
