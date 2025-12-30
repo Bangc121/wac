@@ -50,10 +50,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen> {
               color: Theme.of(context).primaryColor,
             ),
             const SizedBox(height: 24),
-            const Text(
-              'WAC Project',
-              style: AppTextStyles.displayMedium,
-            ),
+            const Text('WAC 프로젝트', style: AppTextStyles.displayMedium),
             const SizedBox(height: 48),
             // Loading Indicator
             const CircularProgressIndicator(),
